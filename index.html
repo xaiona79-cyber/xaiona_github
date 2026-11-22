@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>គណនាថ្លៃផ្ញើរយានជំនិះ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1>គណនាថ្លៃផ្ញើរយានជំនិះ</h1>
+
+  <div class="row">
+    <label for="vehicle">ជ្រើសរើស យានជំនិះ</label>
+    <div class="field">
+      <select id="vehicle">
+        <option value="car">ឡាន</option>
+        <option value="moto">ម៉ូតូ</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="tin">ម៉ោងចូល</label>
+    <div class="field"><input type="time" id="tin"></div>
+  </div>
+
+  <div class="row">
+    <label for="tout">ម៉ោងចេញ</label>
+    <div class="field"><input type="time" id="tout"></div>
+  </div>
+
+  <div class="row">
+    <label>ថ្លៃផ្ញើរ រៀល</label>
+    <div class="field"><input type="text" id="riel" readonly><span class="unit">៛</span></div>
+  </div>
+
+  <div class="row">
+    <label>ថ្លៃផ្ញើរ ដុល្លា</label>
+    <div class="field"><input type="text" id="usd" readonly><span class="unit">$</span></div>
+  </div>
+
+  <button id="calc" type="button">គណនា</button>
+  <div id="msg"></div>
+</div>
+
+<div class="card rules">
+  <p>ឡាន</p>
+  <ul>
+    <li>+ ប្រសិនបើផ្ញើរ 8h ⇒ 1h = 500៛</li>
+    <li>+ តែបើលើស 8h ⇒ 1h = 1000៛</li>
+  </ul>
+  <p>ម៉ូតូ</p>
+  <ul>
+    <li>+ ប្រសិនបើផ្ញើរ 8h ⇒ 1h = 200៛</li>
+    <li>+ តែបើលើស 8h ⇒ 1h = 300៛</li>
+  </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
